@@ -22,7 +22,7 @@ module.exports = {
   // siteUrl: 'https://www.meetall.us',
   // pathPrefix: '/gridsome-starter-buefy/',
   siteUrl: 'https://demonwhite.github.io',
-  pathPrefix: '/meetall-buefy',
+  // pathPrefix: '/meetall-buefy',
   siteDescription: 'Online Meeting Translation + Transcript Tool',
   plugins: [
     {
