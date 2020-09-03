@@ -8,12 +8,17 @@
   "license": "BSD-3-Clause",
   "author": "FriendlyUser <davidli012345@gmail.com>",
   "scripts": {
+
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
+
     "build": "npx gridsome build",
     "develop": "gridsome develop",
     "explore": "gridsome explore"
   },
   "dependencies": {
     "buefy": "^0.8.10",
+    "gh-pages": "^3.1.0",
     "gridsome": "^0.7.12"
   },
   "devDependencies": {

@@ -18,9 +18,12 @@ function addStyleResource (rule) {
 }
 
 module.exports = {
-  siteName: 'Sample Gridsome Buefy Site',
-  siteUrl: 'https://friendlyuser.github.io',
-  pathPrefix: '/gridsome-starter-buefy/',
+  siteName: 'MeetAll',
+  // siteUrl: 'https://www.meetall.us',
+  // pathPrefix: '/gridsome-starter-buefy/',
+  siteUrl: 'https://demonwhite.github.io',
+  pathPrefix: '/meetall-buefy',
+  siteDescription: 'Online Meeting Translation + Transcript Tool',
   plugins: [
     {
       use: '@gridsome/source-filesystem',
