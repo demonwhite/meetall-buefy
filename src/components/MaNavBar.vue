@@ -10,41 +10,29 @@
             </b-navbar-item>
       </template>
       <template slot="start">
-            <b-navbar-item>
-              <g-link to="/">
+              <g-link to="/" class="navbar-item">
                 ALL Online Meeting <br />Translation + Transcript
               </g-link>
-            </b-navbar-item>
-            <b-navbar-item>
-                <g-link to="/translate/">
-                  7/24 Translate <br />Text + Document
-                </g-link>
-            </b-navbar-item>
-                <b-navbar-item>
-                    <g-link to="/plan-and-pricing/">
+              <g-link to="/translate/" class="navbar-item">
+                7/24 Translate <br />Text + Document
+              </g-link>
+              <g-link to="/plan-and-pricing/" class="navbar-item">
                       Plans + <br />Pricing
-                    </g-link>
-                </b-navbar-item>
-                <b-navbar-item>
-                    <g-link to="/blog-price/">
+              </g-link>
+              <g-link to="/blog-price/" class="navbar-item">
                       Download <br />for Mac / Pc
-                    </g-link>
-                </b-navbar-item>
+              </g-link>
         </template>
 
         <template slot="end">
-
-            <b-navbar-item>
-                    <g-link class="">
+              <g-link class="navbar-item">
                         Login
-                    </g-link>
-            </b-navbar-item>
+              </g-link>
             <div class="slash"> / </div>
-            <b-navbar-item>
-                    <g-link class="">
+              <g-link class="navbar-item">
                         Sign up
-                    </g-link>
-            </b-navbar-item>
+              </g-link>
+
         </template>
     </b-navbar>
   </div>
