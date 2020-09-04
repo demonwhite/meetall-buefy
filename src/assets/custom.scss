@@ -1,3 +1,5 @@
+// Buefy customization
+
 .button { 
     border-radius: 0;
     font-size: 13px;
@@ -7,3 +9,23 @@
 .button.is-large { 
     font-size: 20px 
 };
+
+// MeetAll Classes
+.ma-navbar-wrap {
+    border-bottom: 1px solid $light;
+}
+
+.ma-navbar {
+    height: 56px;
+}
+.ma-navbar .navbar-item {
+    font-size: 12px;
+    line-height: 13px;
+    a {
+        color: $text-light;
+    }
+}
+.ma-navbar .active--exact.active {
+    color: $text;
+    font-weight: 500;
+}

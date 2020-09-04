@@ -1,5 +1,6 @@
 <template>
-<Layout title="David Li Portfolio">
+<MaLayout title="MeetAll">
+
   <br />
   <br />
   <Skills />
@@ -75,12 +76,13 @@
     </p>
   </div>
 </footer>
-</Layout>
+</MaLayout>
 </template>
 
 <script>
 import Skills from '~/components/Skills'
-import Layout from '~/layouts/Default.vue'
+// import Layout from '~/layouts/Default.vue'
+import MaLayout from '~/layouts/MaDefault.vue'
 export default {
   data() {
     return {
@@ -88,8 +90,9 @@ export default {
     }
   },
   components: {
-    Layout,
-    Skills
+    // Layout,
+    Skills,
+    MaLayout
   }
 }
 </script>
