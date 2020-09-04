@@ -25,20 +25,27 @@
         </template>
 
         <template slot="end">
-              <g-link class="navbar-item">
+              <g-link to="/login/" class="navbar-item">
                         Login
               </g-link>
             <div class="slash"> / </div>
-              <g-link class="navbar-item">
+              <g-link to="/sign-up/" class="navbar-item">
                         Sign up
               </g-link>
-
+            <g-link class="navbar-item">
+                <b-icon 
+                type="is-light"
+                icon="menu"
+                custom-size="mdi-24px">
+              </b-icon>
+            </g-link>
         </template>
     </b-navbar>
   </div>
 </template>
 
 <script>
+
 export default {
   name: 'MaNavBar',
   data () {
@@ -54,7 +61,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 .navbar-brand .navbar-item {
   padding: 0;
   background-color: rgba(255, 255, 255, 0);
@@ -69,6 +76,7 @@ export default {
 }
 .navbar-end .navbar-item {
   padding: 0.5rem 10px;
+
 }
 .navbar-end .slash {
   display: flex;

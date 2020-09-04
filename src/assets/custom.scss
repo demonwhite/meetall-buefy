@@ -7,12 +7,12 @@
     text-transform: uppercase;
 }
 .button.is-large { 
-    font-size: 20px 
+    font-size: 20px; 
 };
 
 // MeetAll Classes
 .ma-navbar-wrap {
-    border-bottom: 1px solid $light;
+    border-bottom: 1px solid $super-light;
 }
 
 .ma-navbar {
@@ -21,6 +21,8 @@
 .ma-navbar .navbar-item {
     font-size: 12px;
     line-height: 13px;
+    font-weight: 500;
+    color: $text-light;
     a {
         color: $text-light;
     }

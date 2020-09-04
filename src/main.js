@@ -4,6 +4,7 @@ import DefaultLayout from '~/layouts/Default.vue'
 import MaDefault from '~/layouts/MaDefault.vue'
 import Buefy from 'buefy'
 import '~/assets/styles.scss'
+
 // import 'buefy/dist/buefy.css'
 export default function (Vue, { router, head, isClient }) {
   // add font Montserrat
