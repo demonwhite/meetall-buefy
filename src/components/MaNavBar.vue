@@ -32,30 +32,40 @@
               <g-link to="/sign-up/" class="navbar-item">
                         Sign up
               </g-link>
-            <g-link class="navbar-item">
-                <b-icon 
-                type="is-light"
-                icon="menu"
-                custom-size="mdi-24px">
-              </b-icon>
-            </g-link>
+            <b-navbar-item type="div" @click="onClick">
+                <b-icon style="margin: 0;"
+                  type="is-light" 
+                  icon="menu"
+                  custom-size="mdi-24px">
+                </b-icon>
+            </b-navbar-item>
+            <TopCard v-if="popup" 
+                     v-on:close-ma-top-card="onClick" />
         </template>
     </b-navbar>
+    
   </div>
 </template>
 
-<script>
 
+
+<script>
+import TopCard from '~/components/TopCard.vue'
 export default {
+  components: {
+    TopCard
+  },
   name: 'MaNavBar',
   data () {
     return {
-      message: 'Try change me!'
+      message: 'Try change me!',
+      popup: false,
     }
   },
   methods: {
     onClick () {
-      this.message = 'Here you go :)'
+      this.popup = !this.popup;
+      console.log(this.popup);
     }
   }
 }
