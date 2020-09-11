@@ -1,7 +1,7 @@
 // set utility
-$desktop: 1080px;
-$widescree: 1080px;
-$fullhd: 1080px;
+$desktop: 1000px;
+$widescree: 1000px;
+$fullhd: 1000px;
 $gap: 0;
 
 // set fonts
@@ -15,19 +15,25 @@ $primary-invert: findColorInvert($primary);
 $twitter: #4099FF;
 $twitter-invert: findColorInvert($twitter);
 
-$light: #9c9c9c;
-$super-light: #ececec;
+$dark: #646464;
+$light: #a6a6a6;
+$super-light: #9c9c9c;
 
 // set text
-$body-size: 13px;
+$body-size: 15px;
 $text: #3c3c3c;
 $text-light: #9c9c9c;
 $size-3: 2rem;
 
+// Carousel
+$carousel-indicator-color: transparent;
+$carousel-indicator-border: $light;
+// $carousel-indicator-spaced: 5rem;
 
 // set button
 $button-border-color: #4296ff;
 $button-border-width: 1px;
+$button-text-color: $white;
 
 // Setup $colors to use as bulma classes (e.g. 'is-twitter')
 $colors: (

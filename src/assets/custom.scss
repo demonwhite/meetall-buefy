@@ -2,24 +2,26 @@
 
 .button { 
     border-radius: 0;
-    font-size: 13px;
+    font-size: 15px;
     font-weight: 700;
-    text-transform: uppercase;
+    height: 40px;
+    // text-transform: uppercase;
 }
 .button.is-large { 
     font-size: 20px; 
 };
 
 // MeetAll Classes
-.ma-navbar-wrap {
-    border-bottom: 1px solid $super-light;
-}
+
+// .ma-navbar-wrap {
+//     border-bottom: 1px solid $super-light;
+// }
 
 .ma-navbar {
-    height: 56px;
+    height: 65px;
 }
 .ma-navbar .navbar-item {
-    font-size: 12px;
+    font-size: 15px;
     line-height: 13px;
     font-weight: 500;
     color: $text-light;
@@ -30,4 +32,28 @@
 .ma-navbar .active--exact.active {
     color: $text;
     font-weight: 500;
+}
+
+// Carousel
+.carousel {
+    .carousel-indicator {
+        margin-top: 1.5rem;
+        .indicator-item{
+            &.is-active .indicator-style,
+            .indicator-style:hover {
+                background: $dark;
+                border: none;
+            }
+            .indicator-style {
+                border: none;
+                &.is-dots {
+                    border-radius: 6px;
+                    height: 6px;
+                    width: 6px;
+                }
+            }
+        }
+
+    }
+    
 }

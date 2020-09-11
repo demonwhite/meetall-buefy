@@ -3,50 +3,44 @@
     <b-navbar class="ma-navbar container">
       <template slot="brand">
             <b-navbar-item tag="router-link" :to="{ path: '/' }">
-              <g-image immediate style="width: 50px;"
-                src="~/images/meetall-logo.svg" 
+              <g-image immediate style="width: 180px;"
+                src="~/images/meet-all-logo.png" 
                 alt="MeetAll Logo"
-                width="50"/>
+                width="180"/>
             </b-navbar-item>
       </template>
       <template slot="start">
               <g-link to="/" class="navbar-item">
-                MeetAll
+                ALL Online Meeting <br />Translation + Transcript
               </g-link>
               <g-link to="/translate/" class="navbar-item">
-                Translator
+                7/24 Translate <br />Text + Document
               </g-link>
               <g-link to="/plan-and-pricing/" class="navbar-item">
-                Pricing
+                      Plans + <br />Pricing
               </g-link>
               <g-link to="/blog-price/" class="navbar-item">
-                Download
+                      Download <br />for Mac / Pc
               </g-link>
         </template>
 
         <template slot="end">
-
               <g-link to="/login/" class="navbar-item">
-                        Start
+                        Login
               </g-link>
+            <div class="slash"> / </div>
               <g-link to="/sign-up/" class="navbar-item">
-                        Join
+                        Sign up
               </g-link>
-              <div class="navbar-item">
-                <b-button tag="router-link"
-                  to="/login" inverted
-                  type="is-primary">
-                  Login
-              </b-button>
-              </div>
-              <div class="navbar-item sign-up">
-                <b-button tag="router-link"
-                  to="/sing-up"
-                  type="is-primary">
-                  Sign Up
-              </b-button>
-              </div>
-
+            <b-navbar-item type="div" @click="onClick">
+                <b-icon style="margin: 0;"
+                  type="is-light" 
+                  icon="menu"
+                  custom-size="mdi-24px">
+                </b-icon>
+            </b-navbar-item>
+            <TopCard v-if="popup" 
+                     v-on:close-ma-top-card="onClick" />
         </template>
     </b-navbar>
     
@@ -56,9 +50,10 @@
 
 
 <script>
+import TopCard from '~/components/TopCard.vue'
 export default {
   components: {
-
+    TopCard
   },
   name: 'MaNavBar',
   data () {
@@ -82,9 +77,8 @@ export default {
   background-color: rgba(255, 255, 255, 0);
 }
 .navbar-item img {
-    max-height: 50px !important;
-    // width: auto;
-    width: 100%;
+    max-height: 38px !important;
+    width: auto;
     margin-right: 2em;
 }
 .navbar-start .navbar-item {
@@ -94,9 +88,8 @@ export default {
   padding: 0.5rem 10px;
 
 }
-
-
-.navbar-end .sign-up .button{
-  width: 100px;
+.navbar-end .slash {
+  display: flex;
+  align-items: center; 
 }
 </style>
