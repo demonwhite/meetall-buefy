@@ -6,16 +6,19 @@
       <slot /> <!-- the content -->
     </main>
   </transition>
+  <MaFooter />
 </div>
 </template>
 
 <script>
 import Navbar from '~/components/Navbar'
 import MaNavBar from '~/components/MaNavBar'
+import MaFooter from '~/components/MaFooter.vue'
 export default {
   components: {
     Navbar,
-    MaNavBar
+    MaNavBar,
+    MaFooter
   }
 }
 </script>

@@ -3,7 +3,7 @@
     <b-navbar class="ma-navbar container">
       <template slot="brand">
             <b-navbar-item tag="router-link" :to="{ path: '/' }">
-              <g-image immediate
+              <g-image immediate style="width: 180px;"
                 src="~/images/meet-all-logo.png" 
                 alt="MeetAll Logo"
                 width="180"/>

@@ -14,16 +14,12 @@
                 <g-link 
                 class="b-menu-item" 
                 to="/start/">
-                    <strong>START</strong> ALL Online
-Meeting Translation 
-+ Transcript
+                    <strong>START</strong> ALL Online Meeting Translation + Transcript
                 </g-link>
                 <g-link 
                 class="b-menu-item" 
                 to="/join/">
-                    <strong>JOIN</strong> ALL Online 
-Meeting Translation 
-+ Transcript
+                    <strong>JOIN</strong> ALL Online Meeting Translation + Transcript
                 </g-link>
             </b-menu-list>
         </b-menu>
@@ -57,8 +53,6 @@ Meeting Translation
           
       </div>
 
-      
-  </div>
 </transition>
 </template>
 
