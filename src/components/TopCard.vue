@@ -100,9 +100,9 @@ export default {
             border-color: transparent;
         }
 
-        .ma-top-card-list {
-            // margin-top: 2rem;
-        }
+        // .ma-top-card-list {
+        //     // margin-top: 2rem;
+        // }
     }
     
 </style>

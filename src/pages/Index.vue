@@ -1,6 +1,7 @@
 <template>
 <MaLayout title="MeetAll">
-<header class="container has-text-centered ma-header">
+
+<!-- <header class="container has-text-centered ma-header">
 
   <h1 class="title has-text-weight-normal">
     MeetALL, the first ever <br />
@@ -9,64 +10,62 @@
     ALL languages for ALL users.
   </h1>
 
+</header> -->
+
+<header class="container header" id="ma-home-header">
+  <div class="columns">
+    <div class="column is-half">
+       <b-carousel class="ma-header-carousel"
+        :pause-info="false"
+        :arrow="false"
+        :indicator-inside="false">
+          <b-carousel-item v-for="(carousel, i) in carousels" :key="i">
+                <section :class="`hero is-medium is-${carousel.color}`">
+                    <div class="hero-body has-text-centered">
+                        <h1 class="title">{{carousel.text}}</h1>
+                    </div>
+                </section>
+            </b-carousel-item>
+        </b-carousel>
+    </div>
+    <div class="column is-half">
+      <h1 class="title mb-6">Online Meeting  <br />Live Translate + Transcribe</h1>
+      <p class="subtitle mt-2 ma-header-subtitle has-text-black" style="padding-right: 5rem; margin-bottom: 40px;">
+        Translate <span class="ma-hl-all">ALL</span> online meetings into <span class="ma-hl-all">ALL</span> languages for <span class="ma-hl-all">ALL</span> industry users. 
+        Save <span class="ma-hl-all">ALL</span> meeting transcripts in your account for immediate review.
+      </p>
+      <button class="button is-primary ma-btn-get-started">
+        Get Started
+      </button>
+    </div>
+  </div>
 </header>
-<div class="container">
 
-    <b-carousel 
-      :pause-info="false"
-      :arrow="false"
-      :indicator-inside="false">
-        <b-carousel-item v-for="(carousel, i) in carousels" :key="i">
-            <section :class="`hero is-medium is-${carousel.color}`">
-                <div class="hero-body has-text-centered">
-                    <h1 class="title">{{carousel.text}}</h1>
-                </div>
-            </section>
-        </b-carousel-item>
-    </b-carousel>
+<section class="container section" id="ma-home-intro">
+  <div class="columns">
+    <div class="column is-half has-text-centered">
+      <h2 class="subtitle has-text-black">2 steps to</h2>
+      <g-image immediate style="width: 370px;"
+                src="~/images/meetall-all-large.svg" 
+                alt="MeetAll ALL large text"
+                width="370"/>
+      <b-button class="ma-btn-lang-dropdown mt-5" icon-right="chevron-down"
+      size="is-large" expanded>
+          <span class="ma-btn-lang-dropdown-txt">More than 100 Languages</span>
+        </b-button>
+      <p class="is-size-7 has-text-weight-medium">* The number of languages is subject to change</p>
+    </div>
+    <div class="column is-half">
+      <h2 class="subtitle has-text-black mb-1 mt-6">Open your meeting software</h2>
+      <p class="has-text-weight-medium">Connect with <span class="ma-hl-all">ALL</span> online meeting software, <br />
+including Zoom, Webex, Google Meet, Skype, etc.</p>
+      <h2 class="subtitle has-text-black mb-1 mt-5">Open MeetALL</h2>
+      <p class="has-text-weight-medium">From MeetALL desktop app / website, follow 
+auto navigation, start / join in a few seconds.</p>
+    </div>
+  </div>
+</section>
 
-    <h1 class="title">MeetAll</h1>
-    <h2 class="subtitle">Home Page</h2>
-  </div>
-  <hr />
-  <br />
-  <div class="container">
-    <h1 class="title">Test</h1>
-  <b-steps
-     v-model="activeStep"
-  >
-    <b-step-item label="Installation" icon="npm">
-      <ul>
-        <li> Install gridsome by running <i> npm install -g gridsome </i> </li>
-        <li> Then clone this repo by running <i> git clone https://github.com/FriendlyUser/gridsome-starter-buefy.git</i> </li>
-      </ul>
-    </b-step-item>
-    <b-step-item label="Configuration" icon="web">
-      <ul>
-        <li> Update <i>gridsome.config.js</i> with unique site name and hosting details. </li>
-        <li> Change formspree to use your personal email address. </li>
-      </ul>
-    </b-step-item>
-    <b-step-item label="Deployment" icon="azure">
-      Deployment can be handled using azure pipelines, additionally considering adding more customization.
-    </b-step-item>
-  </b-steps>
-  </div>
-  <div class="container">
-    <section>
-     
-    </section>
-  </div>
-  <footer class="footer">
-   <h1 class="title">Footer</h1>
-  <div class="content has-text-centered">
-    <p>
-      <strong>Gridsome Starter Buefy</strong> by <a href="https://FriendlyUser.github.io">David Li</a>. The source code is licensed
-      <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
-      is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
-    </p>
-  </div>
-</footer>
 </MaLayout>
 </template>
 
@@ -78,6 +77,7 @@ import MaLayout from '~/layouts/MaDefault.vue'
 export default {
   data() {
     return {
+      dropdown: false,
       activeStep: 0,
       carousels: [
                 { text: 'Slide 1', color: 'primary' },
@@ -96,8 +96,39 @@ export default {
 }
 </script>
 
-<style>
-.ma-header {
-  margin-top: 5rem;
+<style lang="scss">
+$dark: #646464;
+$primary: #327bf9;
+
+.ma-header-carousel {
+  margin-left: 50px;
+  margin-top: 3rem;
+}
+.ma-header-subtitle {
+  margin-top: 4rem;
+}
+.ma-btn-get-started {
+  width: 250px;
+  height: 40px;
+}
+
+button.ma-btn-lang-dropdown {
+  color: $dark;
+  border-color: transparent;
+  height: 40px;
+  .ma-btn-lang-dropdown-txt {
+    margin-top: -1rem;;
+  }
+  .icon {
+    color: $primary;
+  }
+  
+}
+
+@media screen and (max-width: 480px) {
+  .ma-header-carousel {
+    margin-top: 0;
+    margin-left: 0;
+  }
 }
 </style>

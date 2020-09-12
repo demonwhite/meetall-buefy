@@ -3,13 +3,14 @@ $desktop: 1000px;
 $widescree: 1000px;
 $fullhd: 1000px;
 $gap: 0;
+$column-gap: 40px;
 
 // set fonts
 $family-sans-serif: 'Montserrat', 'Roboto', sans-serif;
 $family-primary: $family-sans-serif;
 
 // Set your colors
-$primary: #4296FF;
+$primary: #327bf9;
 $primary-invert: findColorInvert($primary);
 
 $twitter: #4099FF;
@@ -21,9 +22,14 @@ $super-light: #9c9c9c;
 
 // set text
 $body-size: 15px;
-$text: #3c3c3c;
+$text: $dark;
 $text-light: #9c9c9c;
 $size-3: 2rem;
+$title-size: 2.15em;
+$title-line-height: 2.6rem;
+$subtitle-size: 1.2em;
+$subtitle-weight: $weight-semibold;
+$subtitle-line-height: 1.6em;
 
 // Carousel
 $carousel-indicator-color: transparent;

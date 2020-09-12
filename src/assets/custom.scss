@@ -1,3 +1,9 @@
+// Layouts
+header.container {
+    // padding-left: 50px;
+    margin-top: 80px;
+}
+
 // Buefy customization
 
 .button { 
@@ -12,6 +18,10 @@
 };
 
 // MeetAll Classes
+
+.ma-hl-all {
+    color: $primary;
+}
 
 // .ma-navbar-wrap {
 //     border-bottom: 1px solid $super-light;
@@ -37,7 +47,7 @@
 // Carousel
 .carousel {
     .carousel-indicator {
-        margin-top: 1.5rem;
+        margin-top: 1.2rem;
         .indicator-item{
             &.is-active .indicator-style,
             .indicator-style:hover {
@@ -56,4 +66,15 @@
 
     }
     
+}
+
+
+@media screen and (max-width: 480px) {
+    main .container {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+    header.container {
+        margin-top: 2rem;
+    }
 }

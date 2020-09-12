@@ -23,9 +23,9 @@
                 Download
               </g-link>
         </template>
-
+        
         <template slot="end">
-
+              <hr class="is-hidden-tablet-only my-3">
               <g-link to="/login/" class="navbar-item">
                         Start
               </g-link>
@@ -39,7 +39,7 @@
                   Login
               </b-button>
               </div>
-              <div class="navbar-item sign-up">
+              <div class="navbar-item sign-up" >
                 <b-button tag="router-link"
                   to="/sing-up"
                   type="is-primary">
@@ -90,6 +90,9 @@ export default {
 .navbar-start .navbar-item {
   padding: 0.5rem 15px;
 }
+.navbar-end {
+  padding: 0.5rem;
+}
 .navbar-end .navbar-item {
   padding: 0.5rem 10px;
 
@@ -98,5 +101,18 @@ export default {
 
 .navbar-end .sign-up .button{
   width: 100px;
+  color: #FFF;
+}
+
+@media screen and (max-width: 480px) {
+  .navbar-brand {
+    padding: 1rem;
+  }
+  .navbar-start {
+    margin-top: 1rem;
+  }
+ .navbar-end > .navbar-item {
+   padding: 0.5rem ;
+ }
 }
 </style>
